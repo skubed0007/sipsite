@@ -1,0 +1,79 @@
+/* Allow the document to be as tall as needed, and let it scroll naturally */
+body,
+html {
+  margin: 0;
+  font-family: 'JetBrains Mono', monospace;
+  color: #ebdbb2;
+  text-align: center;
+}
+
+/* Fix the animated background so it stays behind everything and covers the viewport */
+.background {
+  position: fixed; /* fixed so it stays visible during scrolling */
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    #1d2021,    /* Near-black base */
+    #2b1a12,    /* Deep burnt orange */
+    #3a2318,    /* Dark, muted copper */
+    #472c1e,    /* Rich dark copper */
+    #553522,    /* Deep sepia */
+    #623d27,    /* Dark burnt sienna */
+    #6f472d,    /* Rich auburn */
+    #7a5132,    /* Dark orange-brown */
+    #854d2f,    /* Deep terracotta */
+    #8f4a2b,    /* Dark rustic orange */
+    #9a4627,    /* Subtle red-orange */
+    #a34124     /* Muted deep rust */
+  );
+    background-size: 400% 400%;
+  animation: flow 20s ease infinite;
+  z-index: -1;
+  filter: blur(50px);
+  transform: scale(1.1);
+}
+
+/* Adjust the keyframes for smooth gradient flow */
+@keyframes flow {
+  0%   { background-position: 0% 50%; }
+  25%  { background-position: 50% 50%; }
+  50%  { background-position: 100% 50%; }
+  75%  { background-position: 50% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Content container: center horizontally, with padding for spacing */
+.content {
+  margin: 0 auto;
+  padding: 2em;
+}
+.buttons {
+  display: inline-block;
+  padding: 0.8em 1.5em;
+  margin: 0.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ebdbb2;
+  background-color: #504945;
+  border: 2px solid #928374;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.buttons:hover {
+  background-color: #928374;
+  color: #1d2021;
+  border-color: #fabd2f;
+  transform: scale(1.05);
+cursor:pointer;
+}
+
+.buttons:active {
+  transform: scale(0.95);
+  background-color: #fabd2f;
+  color: #1d2021;
+}
