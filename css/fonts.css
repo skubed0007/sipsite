@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Balsamiq Sans';
+    src: url('fonts/BalsamiqSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Balsamiq Sans';
+    src: url('fonts/BalsamiqSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Balsamiq Sans';
+    src: url('fonts/BalsamiqSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Balsamiq Sans';
+    src: url('fonts/BalsamiqSans-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Borel';
+    src: url('../fonts/Borel-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: cursive; /* ← use 'cursive' instead of 'normal' */
+}
+
+@font-face {
+    font-family: 'Akaya Kanadaka';
+    src: url('../fonts/AkayaKanadaka-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: cursive; /* ← use 'cursive' instead of 'normal' */
+}
