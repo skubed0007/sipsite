@@ -1,23 +1,14 @@
 /* css/index.css */
 
-/* ———————————————————————————————————————————————————————————
-   Imports (always at the very top)
-——————————————————————————————————————————————————————————— */
 @import url('../fonts/fonts.css');
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=IBM+Plex+Mono:wght@400;600&family=Borel&display=swap');
 
-/* ———————————————————————————————————————————————————————————
-   Base resets
-——————————————————————————————————————————————————————————— */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ———————————————————————————————————————————————————————————
-   Body & Layout
-——————————————————————————————————————————————————————————— */
 body {
   font-family: 'Balsamiq Sans', cursive;
   background: linear-gradient(
@@ -37,9 +28,6 @@ body {
   min-height: 100vh;
 }
 
-/* ———————————————————————————————————————————————————————————
-   Logo Animation
-——————————————————————————————————————————————————————————— */
 .logo {
   width: 10em;
   height: 10em;
@@ -51,9 +39,6 @@ body {
   to { transform: translateY(-1em); }
 }
 
-/* ———————————————————————————————————————————————————————————
-   Titles & Subtitles
-——————————————————————————————————————————————————————————— */
 .title {
   font-family: 'Borel', serif;
   font-size: 6em;
@@ -61,9 +46,6 @@ body {
   text-decoration: underline;
   margin-bottom: 0.5em;
   transition: transform 0.1s;
-}
-.title:hover {
-  transform: rotate(-2deg);
 }
 
 .subtitle {
@@ -75,15 +57,7 @@ body {
   margin-bottom: 2em;
   transition: color 0.2s, transform 0.2s;
 }
-.subtitle:hover {
-  transform: rotate(2deg);
-  color: #675b4e;
-}
 
-/* ———————————————————————————————————————————————————————————
-   Code Panels
-——————————————————————————————————————————————————————————— */
-/* monospace for code */
 .code-container {
   display: flex;
   gap: 1em;
@@ -116,9 +90,6 @@ body {
   color: #ebdbb2;
 }
 
-/* ———————————————————————————————————————————————————————————
-   Footer
-——————————————————————————————————————————————————————————— */
 .footer {
   display: flex;
   justify-content: center;
@@ -149,11 +120,7 @@ body {
   transition: background-position 0.2s;
 }
 
-/* ———————————————————————————————————————————————————————————
-   Responsive Overrides
-——————————————————————————————————————————————————————————— */
 @media (max-width: 768px) {
-  /* scale down headings */
   .title {
     font-size: 3em;
   }
@@ -161,19 +128,16 @@ body {
     font-size: 1.5em;
   }
 
-  /* tighter body padding */
   body {
     padding: 1em;
   }
 
-  /* slimmer code windows */
   .code-window {
     max-width: 100%;
     border-width: 0.25em;
     margin-bottom: 1em;
   }
 
-  /* stack footer items */
   .footer {
     flex-direction: column;
     align-items: center;
@@ -181,41 +145,37 @@ body {
     padding: 0.5em;
   }
 }
+
 @media (max-width: 768px) {
-  /* 1. No sideways page scroll */
   html, body {
     overflow-x: hidden;
   }
   .title {
-    font-size: 1em;       /* down from 6em */
-
+    font-size: 1em;
   }
 
-  /* 2. Smaller, fluid logo */
   .logo {
-    width: 6em;       /* down from 10em */
+    width: 6em;
     height: auto;
     margin-bottom: 0.75em;
   }
 
-  /* 3. Wrap and pad your subtitle text */
   .subtitle {
-    padding: 0 1em;                /* breathing room on the sides */
-    overflow-wrap: break-word;     /* break long words/lines */
-    hyphens: auto;                 /* optional hyphenation */
+    padding: 0 1em;
+    overflow-wrap: break-word;
+    hyphens: auto;
     font-size: 1em;
   }
 
-  /* 4. Add side-padding around your code panels */
   .code-container {
     width: 100%;
     padding: 0 1em;
     box-sizing: border-box;
   }
 
-  /* 5. (Optional) Let your code wrap instead of scrolling */
   .code-text {
-    white-space: pre-wrap;         /* wrap long lines */
-    word-break: break-all;         /* force breaking if necessary */
+    white-space: pre-wrap;
+    word-break: break-all;
   }
 }
+
