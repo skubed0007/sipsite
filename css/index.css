@@ -1,11 +1,23 @@
+/* css/index.css */
+
+/* ———————————————————————————————————————————————————————————
+   Imports (always at the very top)
+——————————————————————————————————————————————————————————— */
 @import url('../fonts/fonts.css');
-/* Base resets */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=IBM+Plex+Mono:wght@400;600&family=Borel&display=swap');
+
+/* ———————————————————————————————————————————————————————————
+   Base resets
+——————————————————————————————————————————————————————————— */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ———————————————————————————————————————————————————————————
+   Body & Layout
+——————————————————————————————————————————————————————————— */
 body {
   font-family: 'Balsamiq Sans', cursive;
   background: linear-gradient(
@@ -25,6 +37,9 @@ body {
   min-height: 100vh;
 }
 
+/* ———————————————————————————————————————————————————————————
+   Logo Animation
+——————————————————————————————————————————————————————————— */
 .logo {
   width: 10em;
   height: 10em;
@@ -36,6 +51,9 @@ body {
   to { transform: translateY(-1em); }
 }
 
+/* ———————————————————————————————————————————————————————————
+   Titles & Subtitles
+——————————————————————————————————————————————————————————— */
 .title {
   font-family: 'Borel', serif;
   font-size: 6em;
@@ -52,8 +70,8 @@ body {
   font-family: 'Balsamiq Sans', cursive;
   font-size: 2.5em;
   color: #d9cfc4;
+  align-self: center;
   text-align: center;
-  max-width: 90%;
   margin-bottom: 2em;
   transition: color 0.2s, transform 0.2s;
 }
@@ -62,18 +80,21 @@ body {
   color: #675b4e;
 }
 
-/* Load Fira Code from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
-
+/* ———————————————————————————————————————————————————————————
+   Code Panels
+——————————————————————————————————————————————————————————— */
+/* monospace for code */
 .code-container {
   display: flex;
   gap: 1em;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 1em;
 }
 
 .code-window {
-  width: 40em;
+  width: 100%;
+  max-width: 40em;
   background: #3d2012;
   border: 0.5em solid #ebcfbf;
   border-radius: 0.5em;
@@ -81,7 +102,6 @@ body {
   overflow-x: auto;
   transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
-
 .code-window:hover {
   transform: translateY(-0.3em) scale(1.02);
   box-shadow: 0 0.75em 1.5em rgba(0,0,0,0.4);
@@ -89,12 +109,16 @@ body {
 }
 
 .code-text {
-  font-family: 'Fira Code', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 1.4em;
   line-height: 1;
   padding: 0.6em;
   color: #ebdbb2;
 }
+
+/* ———————————————————————————————————————————————————————————
+   Footer
+——————————————————————————————————————————————————————————— */
 .footer {
   display: flex;
   justify-content: center;
@@ -108,7 +132,6 @@ body {
   border-radius: 0.5em;
   box-shadow: 0 0.25em 0.5em rgba(0,0,0,0.2);
 }
-
 .footer a {
   color: #d9cfc4;
   background: #965a1e;
@@ -118,7 +141,6 @@ body {
   text-decoration: none;
   transition: color 0.2s, background-color 0.2s;
 }
-
 .footer a:hover {
   color: #675b4e;
   background-image: linear-gradient(to right, #ebdbb2, #d9cfc4);
@@ -127,3 +149,73 @@ body {
   transition: background-position 0.2s;
 }
 
+/* ———————————————————————————————————————————————————————————
+   Responsive Overrides
+——————————————————————————————————————————————————————————— */
+@media (max-width: 768px) {
+  /* scale down headings */
+  .title {
+    font-size: 3em;
+  }
+  .subtitle {
+    font-size: 1.5em;
+  }
+
+  /* tighter body padding */
+  body {
+    padding: 1em;
+  }
+
+  /* slimmer code windows */
+  .code-window {
+    max-width: 100%;
+    border-width: 0.25em;
+    margin-bottom: 1em;
+  }
+
+  /* stack footer items */
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em;
+  }
+}
+@media (max-width: 768px) {
+  /* 1. No sideways page scroll */
+  html, body {
+    overflow-x: hidden;
+  }
+  .title {
+    font-size: 1em;       /* down from 6em */
+
+  }
+
+  /* 2. Smaller, fluid logo */
+  .logo {
+    width: 6em;       /* down from 10em */
+    height: auto;
+    margin-bottom: 0.75em;
+  }
+
+  /* 3. Wrap and pad your subtitle text */
+  .subtitle {
+    padding: 0 1em;                /* breathing room on the sides */
+    overflow-wrap: break-word;     /* break long words/lines */
+    hyphens: auto;                 /* optional hyphenation */
+    font-size: 1em;
+  }
+
+  /* 4. Add side-padding around your code panels */
+  .code-container {
+    width: 100%;
+    padding: 0 1em;
+    box-sizing: border-box;
+  }
+
+  /* 5. (Optional) Let your code wrap instead of scrolling */
+  .code-text {
+    white-space: pre-wrap;         /* wrap long lines */
+    word-break: break-all;         /* force breaking if necessary */
+  }
+}
