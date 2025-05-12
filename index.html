@@ -1,49 +1,54 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <!-- Ensures proper mobile scaling -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sip Programming Language</title>
+    <meta charset="UTF-8" />
+    <!-- Ensures proper mobile scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sip Programming Language</title>
 
-  <!-- Google Fonts & custom fonts loaded via CSS @import -->
-  <link rel="stylesheet" href="css/index.css" />
+    <!-- Google Fonts & custom fonts loaded via CSS @import -->
+    <link rel="stylesheet" href="css/index.css" />
 
-  <!-- Prism.js for syntax highlighting -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" />
-  <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-clike.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-c.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-rust.min.js"></script>
+    <!-- Prism.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-clike.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-c.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-rust.min.js"></script>
 
-  <!-- Font Awesome (optional) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Font Awesome (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-  <link rel="icon" href="logo.png" type="image/png" sizes="16x16" />
+    <link rel="icon" href="logo.png" type="image/png" sizes="16x16" />
 </head>
+
 <body>
-  <img src="logo.png" alt="Sip Logo" class="logo" />
+    <img src="logo.png" alt="Sip Logo" class="logo" />
 
-  <h1 class="title">🍹 Sip Programming Language 🍹</h1>
+    <h1 class="title">🍹 Sip Programming Language 🍹</h1>
 
-  <h2 class="subtitle">
-    Meet Sip—the unicycle-riding ninja that throws a confetti party whenever there’s a bug!
-    It chugs C-power like soda, straps on a crash helmet so your code never eats pavement,
-    and still zooms around your computer at lightning speed.
-    When an error shows up, Sip lights off neon confetti and tells you exactly what went wrong—no secret codes here.
-    It even gives your C libraries a high-five before calling it a day.
-    Ready to ride the fun train and code without the fear?
-  </h2>
+    <h2 class="subtitle">
+        Meet Sip—the unicycle-riding ninja that throws a confetti party whenever there’s a bug!
+        It chugs C-power like soda, straps on a crash helmet so your code never eats pavement,
+        and still zooms around your computer at lightning speed.
+        When an error shows up, Sip lights off neon confetti and tells you exactly what went wrong—no secret codes here.
+        It even gives your C libraries a high-five before calling it a day.
+        Ready to ride the fun train and code without the fear?
+    </h2>
 
-  <p style="font-family:'Balsamiq Sans', cursive; font-size:1.6em; text-align:center; margin:1em 0;">
-    Buckle up your brain cells—here’s how Sip makes “Hello World” feel like carnival magic:
-  </p>
+    <p style="font-family:'Balsamiq Sans', cursive; font-size:1.6em; text-align:center; margin:1em 0;">
+        Buckle up your brain cells—here’s how Sip makes “Hello World” feel like carnival magic:
+    </p>
 
-  <div class="code-container">
-    <!-- SIP code panel -->
-    <div class="code-window">
-      <pre class="code-text"><code>
+    <div class="code-container">
+        <!-- SIP code panel -->
+        <div class="code-window">
+            <p
+                style="font-size:0.1.2em; text-align:left; color: antiquewhite; font-family: 'Borel',cursive; margin-bottom: -2em; margin-left: 0.3em; margin-top: 0.2em;">
+                Sip</p>
+            <pre class="code-text"><code>
 // Step 1: Summon the mystic unistd.h scroll
 clink "unistd.h"
 
@@ -53,11 +58,15 @@ extern write fd(i32) text len(i32) = "write" fd text len;
 // Step 3: Fire the spell to print “HI\n” in neon letters
 write(1, "HI\n", 3);
       </code></pre>
-    </div>
+        </div>
 
-    <!-- C conversion panel -->
-    <div class="code-window">
-      <pre class="code-text"><code>
+        <!-- C conversion panel -->
+        <div class="code-window">
+            <p
+                style="font-size:1.2em; text-align:left; color: antiquewhite; font-family: 'Borel',cursive; margin-bottom: -2em; margin-left: 0.3em; margin-top: 0.2em;">
+                C</p>
+
+            <pre class="code-text"><code>
 // Step 1: Grab the unistd.h treasure map
 #include &lt;unistd.h&gt;
 
@@ -69,15 +78,16 @@ int main() {
     return 0;
 }
       </code></pre>
+        </div>
     </div>
-  </div>
 
-  <!-- Changed from <p> to <div> for more reliable flex behavior -->
-  <div class="footer">
-    Made with pure love and passion by Joy “Jaytirth Kundan,”
-    a human who wants to be Rick Sanchez 😎
-    Check out Sip here:
-    <a href="https://github.com/skubed0007/sip" target="_blank" rel="noopener">github.com/skubed0007/sip</a>
-  </div>
+    <!-- Changed from <p> to <div> for more reliable flex behavior -->
+    <div class="footer">
+        Made with pure love and passion by Joy “Jaytirth Kundan,”
+        a human who wants to be Rick Sanchez 😎
+        Check out Sip here:
+        <a href="https://github.com/skubed0007/sip" target="_blank" rel="noopener">github.com/skubed0007/sip</a>
+    </div>
 </body>
+
 </html>
